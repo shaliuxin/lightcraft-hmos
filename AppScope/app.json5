@@ -1,0 +1,10 @@
+{
+  "app": {
+    "bundleName": "io.github.shaliuxin.lightcraft.hmos",
+    "vendor": "lightcraft-hmos",
+    "versionCode": 210100,
+    "versionName": "0.21.1",
+    "icon": "$media:app_icon",
+    "label": "$string:app_name"
+  }
+}

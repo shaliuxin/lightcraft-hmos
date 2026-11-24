@@ -1,0 +1,5 @@
+Vendored upstream (offline-self-contained port; .git removed so it commits as regular files).
+source: https://github.com/storytold/lightcraft.git
+commit: 361e3bc  (Merge tested main for v0.21.1)
+version: 0.21.1
+vendored: 2026-11-24

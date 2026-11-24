@@ -1,0 +1,5 @@
+# LightCraft craft-fonts manifest (HarmonyOS port).
+# Format: family | style | file | scripts   (fields separated by " | ").
+# SimHei carries full Simplified-Chinese (Hans) glyphs and also serves Traditional (Hant);
+# the engine's font logic uses it as the CJK fallback so the zh-hans / zh-hant UIs render.
+SimHei | Regular | fonts/SimHei.ttf | Hans,Hant,Latn

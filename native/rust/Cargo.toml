@@ -1,0 +1,54 @@
+[workspace]
+resolver = "3"
+
+[package]
+name = "lightcraft-hmos"
+version = "0.21.1"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+
+[lib]
+crate-type = ["staticlib", "rlib"]
+
+[features]
+default = []
+
+[dependencies]
+lightcraft-ui-egui = { path = "../../upstream/lightcraft/crates/ui-egui", default-features = false }
+lightcraft-engine = { path = "../../upstream/lightcraft/crates/engine" }
+egui = { version = "0.37.0", features = ["default_fonts", "monochrome_emoji_fonts"] }
+egui-wgpu = { version = "0.37.0", default-features = false }
+# GLES is the only backend the HarmonyOS NDK exposes; the desktop backends are compiled out by
+# cfg and harmless to leave declared.
+wgpu = { version = "30.0.1", default-features = false, features = ["std", "wgsl", "gles"] }
+raw-window-handle = "0.6"
+pollster = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[patch.crates-io]
+ecolor = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+emath = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+epaint = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+epaint_default_fonts = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+egui = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+egui-winit = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+egui-wgpu = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+egui_glow = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+egui_extras = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+egui_kittest = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+egui_system_font_provider = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+eframe = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+egui_demo_lib = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+egui_inspection = { git = "https://github.com/storytold/egui.git", rev = "6d518fc799681571963842f95b55a6b68431b15a" }
+winit = { git = "https://github.com/storytold/winit.git", rev = "a517b3846ee8457d84ee4975110bfda6797c44dc" }
+# The vendored wgpu-hal carries the HarmonyOS EGL presentation patches (choose_first_config tier
+# and BACK_BUFFER for target_env = "ohos"), reusing the exact wgpu 30.0.1 version LightCraft locks.
+wgpu-hal = { path = "../../third_party/wgpu-hal-30.0.1" }
+
+[profile.dev]
+opt-level = 1
+[profile.dev.package."*"]
+opt-level = 2
+[profile.release]
+lto = "thin"

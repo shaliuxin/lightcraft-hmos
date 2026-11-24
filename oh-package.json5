@@ -1,0 +1,7 @@
+{
+  "modelVersion": "6.0.0",
+  "description": "LightCraft native egui photo editor for HarmonyOS phone, tablet and PC",
+  "license": "MIT OR Apache-2.0",
+  "dependencies": {},
+  "devDependencies": {}
+}

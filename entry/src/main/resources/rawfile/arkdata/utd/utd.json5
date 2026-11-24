@@ -1,0 +1,71 @@
+{
+  "UniformDataTypeDeclarations": [
+    {
+      "TypeId": "io.github.shaliuxin.lightcraft.hmos.webp",
+      "BelongingToTypes": [
+        "general.image"
+      ],
+      "FilenameExtensions": [
+        ".webp"
+      ],
+      "MIMETypes": [
+        "image/webp"
+      ],
+      "Description": "WebP image",
+      "ReferenceURL": ""
+    },
+    {
+      "TypeId": "io.github.shaliuxin.lightcraft.hmos.heif",
+      "BelongingToTypes": [
+        "general.image"
+      ],
+      "FilenameExtensions": [
+        ".heic",
+        ".heif",
+        ".hif"
+      ],
+      "MIMETypes": [
+        "image/heic",
+        "image/heif"
+      ],
+      "Description": "HEIF image",
+      "ReferenceURL": ""
+    },
+    {
+      "TypeId": "io.github.shaliuxin.lightcraft.hmos.camera-raw",
+      "BelongingToTypes": [
+        "general.raw-image"
+      ],
+      "FilenameExtensions": [
+        ".dng",
+        ".cr2",
+        ".cr3",
+        ".nef",
+        ".arw",
+        ".raf",
+        ".orf",
+        ".rw2",
+        ".pef"
+      ],
+      "MIMETypes": [
+        "image/x-dcraw"
+      ],
+      "Description": "Camera RAW image",
+      "ReferenceURL": ""
+    },
+    {
+      "TypeId": "io.github.shaliuxin.lightcraft.hmos.lcpreset",
+      "BelongingToTypes": [
+        "general.object"
+      ],
+      "FilenameExtensions": [
+        ".lcpreset"
+      ],
+      "MIMETypes": [
+        "application/x-lightcraft-preset"
+      ],
+      "Description": "LightCraft develop preset",
+      "ReferenceURL": ""
+    }
+  ]
+}

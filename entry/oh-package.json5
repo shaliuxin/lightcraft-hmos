@@ -1,0 +1,11 @@
+{
+  "name": "entry",
+  "version": "1.0.0",
+  "description": "LightCraft entry module",
+  "main": "",
+  "author": "",
+  "license": "MIT OR Apache-2.0",
+  "dependencies": {
+    "liblightcraft.so": "file:./src/main/cpp/types/liblightcraft"
+  }
+}

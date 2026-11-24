@@ -1,0 +1,43 @@
+# --- Rust / cargo build artifacts (huge; never commit) ---
+native/rust/target/
+upstream/lightcraft/target/
+**/target/
+*.rlib
+*.rmeta
+
+# --- HarmonyOS / DevEco build output ---
+entry/build/
+.hvigor/
+.ohos/
+.preview/
+oh_modules/
+**/oh_modules/
+**/build/default/
+local.properties
+
+# --- IDE / editor ---
+.idea/
+.vscode/
+*.iml
+
+# --- Signed HAPs and their secrets never go to git (see craft-鸿蒙移植通用检查清单 §31.5 / §33.2).
+# The machine-specific DevEco auto-sign config (keyPassword / storePassword / UDID-bound profile)
+# lives in build-profile.json5; only the clean template build-profile.example.json5 is committed. ---
+build-profile.json5
+*.hap
+*.p12
+*.p7b
+*.cer
+*.csr
+
+# --- Logs and scratch ---
+*.log
+_check_*.log
+hap_build*.log
+*.tmp
+lightcraft_panic.txt
+
+# --- OS noise ---
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,5 @@
+{
+  "name": "liblightcraft.so",
+  "version": "0.21.1",
+  "types": "./index.d.ts"
+}

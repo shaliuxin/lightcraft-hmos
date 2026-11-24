@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_description",
+      "value": "LightCraft"
+    },
+    {
+      "name": "app_name",
+      "value": "LightCraft"
+    },
+    {
+      "name": "loading",
+      "value": "Starting LightCraft…"
+    }
+  ]
+}

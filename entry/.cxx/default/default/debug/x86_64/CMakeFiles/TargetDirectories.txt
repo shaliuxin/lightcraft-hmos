@@ -1,0 +1,3 @@
+C:/Users/mingh/WorkBuddy/2026-11-20-15-25-21/lightcraft-hmos/entry/.cxx/default/default/debug/x86_64/CMakeFiles/lightcraft.dir
+C:/Users/mingh/WorkBuddy/2026-11-20-15-25-21/lightcraft-hmos/entry/.cxx/default/default/debug/x86_64/CMakeFiles/edit_cache.dir
+C:/Users/mingh/WorkBuddy/2026-11-20-15-25-21/lightcraft-hmos/entry/.cxx/default/default/debug/x86_64/CMakeFiles/rebuild_cache.dir
